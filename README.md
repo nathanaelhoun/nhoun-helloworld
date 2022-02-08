@@ -13,5 +13,5 @@ Small website, made to showcase how to dockerise a basic node webapp.
 docker build --tag nathanaelhoun/nhoun-helloworld:latest .
 
 # Run the image on your computer
-docker run --rm --it --publish 8080:80 nathanaelhoun/nhoun-helloworld:latest
+docker run --rm -it --publish 8080:80 nathanaelhoun/nhoun-helloworld:latest
 ```

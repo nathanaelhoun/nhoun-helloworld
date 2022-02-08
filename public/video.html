@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Bonjour le monde !</title>
+</head>
+
+<body>
+	<h1>Bonjour, le monde !</h1>
+
+	<button id="youpi" onclick="youpi()" disabled>Bonjour toi aussi !</button>
+	
+	<div id="player" style="display: none;"></div>
+	
+	<hr>
+
+	<button onclick="window.location.reload()">Réessayer.</button>
+
+	<script src="https://www.youtube.com/iframe_api"></script>
+	<script>
+		let player;
+		function onYouTubeIframeAPIReady() {
+			player = new YT.Player('player', {
+				width: 1280,
+				height: 720,
+				videoId: 'dQw4w9WgXcQ',
+				playerVars: {
+				},
+				events: {
+					onReady: function (ev) {
+						document.getElementById("youpi").disabled = false;
+					}
+				}
+			});
+		}
+
+		function youpi() {
+			player.playVideo();
+			
+			setTimeout(() => {
+				player.h.style.display = 'block';
+			}, 1000);
+
+		}
+	</script>
+
+
+</body>
+
+</html>
