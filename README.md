@@ -10,9 +10,8 @@ Using node-v8 because the docker image was much smaller, and the vast majority o
 
 ```bash
 # Build the image
-docker build --tag nathanaelhoun/nhoun-helloworld --file Dockerfile .
+docker build --tag nathanaelhoun/nhoun-helloworld .
 
 # Run the image on your computer
-docker run --publish 8080:80 nathanaelhoun/nhoun-helloworld:latest --detach
-docker rm $CONTAINER_ID
+docker run --rm --publish 8080:80 nathanaelhoun/nhoun-helloworld:latest
 ```
